@@ -11,9 +11,10 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
     </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
-    <header>
+    <header class="col-12">
       <nav class="menu-horizontal">
         <div class="container">
           <button class="custom-button">EFFETTUA L'UPGRADE</button>
@@ -82,5 +83,59 @@
         </div>
       </div>
     </header>
+       <!--PLAYER-->
+       <div class="section-player col-12">
+        <div class="col-4">
+          <div class="song-info">
+            <img src="./img/sinister.jpeg" class="song-img" alt="sinister">
+            <div class="song-details">
+                <h3 class="song-title">Sinister</h3>
+                <p class="artist">
+                  Nome Artista
+                  <span class="pl-30 icon-player material-symbols-outlined">
+                    favorite
+                    </span>
+                    <span class=" icon-player material-symbols-outlined">
+                      folder
+                      </span>
+                </p>
+            </div>
+        </div>
+      </div>
+     
+        
+     
+      <div class="col-4"> 
+        <div class="player">
+          <div class="player-controls">
+            <div class="buttons">
+              <span class=" pt-10 material-symbols-outlined control-btn">shuffle</span>
+              <span class="pt-10 control-btn material-symbols-outlined">
+                skip_previous
+                </span>
+              <span class=" play-icon control-btn material-symbols-outlined"> play_circle</span> 
+              <span class="pt-10 control-btn material-symbols-outlined">skip_next</span>
+                <span class="pt-10 material-symbols-outlined control-btn">repeat</span>
+            </div>
+          </div>
+          <div class="bar">
+            <p class="time mr-10">0:25</p> <!-- Time at the beginning -->
+            <div class="progress-bar">
+            
+            <div class="progress"></div>
+          </div>
+            <p class="time ml-10">4:35</p> <!-- Time at the end -->
+          </div>
+          
+      </div>
+      
+    </div>
+      <div class="col-4"></div>
+
+
+       
+     </div>
+   
+    </div>
   </body>
 </html>
