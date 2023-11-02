@@ -1,9 +1,17 @@
-body {
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   font-family: "Montserrat", sans-serif;
-  margin: 0px;
+}
+body {
+  height: 100%;
 }
 header {
   margin: 0px;
+  display: flex;
 }
 .col-12 {
   width: 100%;
@@ -41,11 +49,10 @@ header {
 .col-1 {
   width: calc(100% / 12 * 1);
 }
-
-.menu {
-  width: 250px;
-  height: 100vh;
+.back-color-black {
   background-color: black;
+}
+.menu {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -53,6 +60,7 @@ header {
   padding-top: 20px;
   margin-left: -10px;
   margin-top: -110px;
+  padding-bottom: 30px;
 }
 
 .logo {
@@ -102,14 +110,14 @@ a {
   align-items: center;
 }
 .container {
-  display: flex;
   justify-content: end;
   align-items: center;
-  padding: 30px 40px;
+  padding: 20px 40px;
   background-color: #111319;
-  margin: -10px;
 }
-
+.d-flex {
+  display: flex;
+}
 .custom-button {
   background-color: #ffffff00;
   color: #ffffff;
@@ -162,12 +170,14 @@ a {
 }
 
 .section-player {
-  margin: -10px;
-  margin-top: -90px;
-  padding: 0;
+  position: fixed;
+  bottom: 0; /* Puoi anche usare 'top: 0;' se vuoi posizionarlo in alto */
+  width: 100%;
+  background-color: #2c2c2c;
+  z-index: 1000; /* Assicura che il player sia sovrapposto a altri elementi */
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
   background-color: #2c2c2c;
 }
 
@@ -223,6 +233,7 @@ a {
 
 .play-icon {
   font-size: 50px !important;
+  margin-top: -3px;
 }
 .bar {
   display: flex;
@@ -250,6 +261,15 @@ a {
 .pl-30 {
   padding-left: 30px;
 }
+.pr-30 {
+  padding-left: 30px;
+}
+.pl-200 {
+  padding-right: 200px;
+}
+.pr-200 {
+  padding-left: 200px;
+}
 .pt-10 {
   padding-top: 10px;
 }
@@ -259,6 +279,131 @@ a {
 .ml-10 {
   margin-left: 10px;
 }
+.mr-30 {
+  margin-right: 30px;
+}
+.ml-30 {
+  margin-left: 30px;
+}
 .time {
   color: white !important;
+}
+.player-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.volume-bar {
+  width: 30%;
+  height: 5px;
+}
+
+.content {
+  background-color: #3c4358;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar li {
+  margin: 0 15px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+  color: #007180;
+}
+
+.nav-bar a.underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-bar a.underline:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background-color: #00ff00;
+}
+.title {
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.recently-played {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.created-from {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.music-item {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.music-item:hover img {
+  filter: brightness(40%);
+}
+
+.music-item:hover .play-icon-hover {
+  display: block !important;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  transition: 0.3s;
+}
+
+.play-icon-hover {
+  display: none !important;
+}
+.music-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  transition: 0.3s;
+  margin: 10px;
+}
+
+.music-title {
+  color: white;
+  margin-bottom: 0px;
+  width: 200px;
+}
+.artist-name {
+  color: rgb(183, 183, 183);
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.rounded-image {
+  border-radius: 100px;
+  object-fit: cover;
+}
+@media screen {
 }
