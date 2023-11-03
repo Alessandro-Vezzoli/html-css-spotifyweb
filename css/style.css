@@ -13,6 +13,7 @@ header {
   margin: 0px;
   display: flex;
 }
+
 .col-12 {
   width: 100%;
 }
@@ -45,6 +46,7 @@ header {
 }
 .col-2 {
   width: calc(100% / 12 * 2);
+  position: relative;
 }
 .col-1 {
   width: calc(100% / 12 * 1);
@@ -53,20 +55,35 @@ header {
   background-color: black;
 }
 .menu {
-  color: #fff;
+  color: #b4b2b2;
   display: flex;
   flex-direction: column;
   padding-left: 60px;
   padding-top: 20px;
-  margin-left: -10px;
+  margin-left: -30px;
   margin-top: -110px;
   padding-bottom: 30px;
 }
+.color-menu {
+  color: #b4b2b2;
+}
+
+.menu a:hover {
+  color: white;
+}
+.menu p:hover {
+  color: white;
+}
 
 .logo {
-  width: 150px;
+  width: auto;
   color: white;
   margin-top: 20px;
+  padding-right: 20px;
+}
+
+.logo-icon {
+  display: none;
 }
 .icon {
   width: 30px;
@@ -136,17 +153,25 @@ a {
 }
 
 .bottom {
-  margin-top: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 100px;
 }
+hr {
+  width: auto;
+}
+
 .app-download {
   color: #fff;
   display: flex;
   margin-top: 10px;
   margin-bottom: -10px;
 }
-.separated {
-  padding-right: 30px;
-}
+
 .download {
   width: 20px;
   padding-right: 10px;
@@ -171,20 +196,19 @@ a {
 
 .section-player {
   position: fixed;
-  bottom: 0; /* Puoi anche usare 'top: 0;' se vuoi posizionarlo in alto */
+  bottom: 0;
   width: 100%;
+  height: 100px;
   background-color: #2c2c2c;
-  z-index: 1000; /* Assicura che il player sia sovrapposto a altri elementi */
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2c2c2c;
 }
 
 .player {
   width: 100%;
   padding: 20px;
-  box-sizing: border-box;
 }
 
 .song-info {
@@ -210,13 +234,13 @@ a {
 .artist {
   color: white;
   margin: 0px;
-  margin-top: -10px;
 }
 
 .player-controls {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
 }
 
 .buttons {
@@ -232,14 +256,14 @@ a {
 }
 
 .play-icon {
-  font-size: 50px !important;
+  font-size: 40px !important;
   margin-top: -3px;
 }
 .bar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Align time at the beginning and end */
-  padding: 0 10px; /* Add padding for better visibility */
+  justify-content: space-between;
+  padding: 0 10px;
 }
 .progress-bar {
   background-color: #454545;
@@ -255,8 +279,9 @@ a {
   border-radius: 5px;
 }
 .icon-player {
-  padding-left: 10px;
+  padding-left: 20px;
   color: gray;
+  padding-top: 23px;
 }
 .pl-30 {
   padding-left: 30px;
@@ -316,13 +341,13 @@ a {
 
 .nav-bar a {
   text-decoration: none;
-  color: #fff;
+  color: #b7b7b7;
   font-size: 15px;
   transition: color 0.3s ease;
 }
 
 .nav-bar a:hover {
-  color: #007180;
+  color: white;
 }
 
 .nav-bar a.underline {
@@ -405,5 +430,175 @@ a {
   border-radius: 100px;
   object-fit: cover;
 }
-@media screen {
+
+@media screen and (max-width: 780px) {
+  .logo {
+    display: none;
+  }
+  .logo-icon {
+    display: flex;
+    padding-right: 30px;
+    padding-top: 30px;
+  }
+  .bottom {
+    text-align: center;
+    padding-left: 30px;
+    width: auto;
+  }
+
+  hr {
+    display: none;
+  }
+  .app-download {
+    margin-bottom: 0px;
+  }
+  .download {
+    padding-left: 4px;
+  }
+
+  .text-dowload {
+    display: none;
+  }
+  .name {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .text-white {
+    display: none;
+  }
+  .new-play {
+    display: none;
+  }
+  .playlist {
+    display: none;
+  }
+  .song-info {
+    margin: 0px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+  }
+  .artist {
+    color: white;
+    margin: 0px;
+    display: flex;
+  }
+  .song-img {
+    height: 50px;
+    margin-right: 10px;
+    padding-top: 20px;
+  }
+  .volume-bar {
+    margin: 0px;
+    margin-right: 10px;
+  }
+  .control-btn {
+    margin: 0px 5px;
+  }
+  .icon-player {
+    display: block;
+  }
+  .nav-bar ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .pl-200 {
+    padding-left: 50px;
+  }
+  .pr-200 {
+    padding-right: 50px;
+  }
+  .nav-bar li {
+    margin: 10px 0;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .logo {
+    display: none;
+  }
+  .logo-icon {
+    display: flex;
+    padding-right: 30px;
+    padding-top: 30px;
+  }
+  .bottom {
+    text-align: center;
+    padding-left: 30px;
+    width: auto;
+  }
+
+  hr {
+    display: none;
+  }
+  .app-download {
+    margin-bottom: 0px;
+  }
+  .download {
+    padding-left: 4px;
+  }
+
+  .text-dowload {
+    display: none;
+  }
+  .name {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .text-white {
+    display: none;
+  }
+  .new-play {
+    display: none;
+  }
+  .playlist {
+    display: none;
+  }
+  .song-info {
+    margin: 0px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+  }
+  .artist {
+    color: white;
+    margin: 0px;
+    display: flex;
+  }
+  .song-img {
+    height: 50px;
+    margin-right: 10px;
+    padding-top: 20px;
+  }
+  .volume-bar {
+    margin: 0px;
+    margin-right: 10px;
+  }
+  .control-btn {
+    margin: 0px 5px;
+  }
+  .icon-player {
+    display: block;
+  }
+  .nav-bar ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .pl-200 {
+    padding-left: 50px;
+  }
+  .pr-200 {
+    padding-right: 50px;
+  }
+  .nav-bar li {
+    margin: 10px 0;
+    padding: 10px;
+  }
 }

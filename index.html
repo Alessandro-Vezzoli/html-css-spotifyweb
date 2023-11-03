@@ -32,18 +32,21 @@
             <div class="logo">
               <img src="./img/logo.svg" alt="Logo" />
             </div>
+            <div class="logo-icon">
+              <img src="./img/logo-small.svg" alt="Logo" />
+            </div>
             <ul>
               <li>
                 <img src="./img/home.svg" class="icon" alt="Logo" />
-                <a href="#">Home</a>
+                <a class="menu-icon" href="#">Home</a>
               </li>
               <li>
                 <img src="./img/search.svg" class="icon" alt="Logo" />
-                <a href="#">Cerca</a>
+                <a class="menu-icon color-menu" href="#">Cerca</a>
               </li>
               <li>
                 <img src="./img/libreria.svg" class="icon" alt="Logo" />
-                <a href="#">La tua libreria</a>
+                <a class="menu-icon color-menu" href="#">La tua libreria</a>
               </li>
             </ul>
             <h3 class="text-white">PLAYLIST</h3>
@@ -79,11 +82,9 @@
             <div class="bottom">
               <div class="app-download">
                 <img src="./img/download.svg" class="download" alt="download" />
-                <p>installa app</p>
+                <p class="text-dowload">installa app</p>
               </div>
-              <div class="separated">
-                <hr />
-              </div>
+              <hr />
               <div class="app-download">
                 <img src="./img/profile.svg" class="img-profile" alt="Logo" />
                 <p class="name"><strong>John Doe </strong></p>
@@ -241,17 +242,17 @@
         <div class="col-4">
           <div class="song-info">
             <img src="./img/sinister.jpeg" class="song-img" alt="sinister" />
-            <div class="song-details">
-              <h3 class="song-title">Sinister</h3>
-              <p class="artist">
-                Nome Artista
-                <span class="pl-30 icon-player material-symbols-outlined">
-                  favorite
-                </span>
-                <span class="icon-player material-symbols-outlined">
-                  folder
-                </span>
-              </p>
+            <div class="col-6 d-flex">
+              <div class="song-details">
+                <h3 class="song-title">Sinister</h3>
+                <p class="artist">Nome Artista</p>
+              </div>
+              <div class="col-6">
+                <div class="icon-player">
+                  <span class="material-symbols-outlined"> favorite </span>
+                  <span class="material-symbols-outlined"> folder </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
