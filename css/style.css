@@ -126,12 +126,15 @@ a {
   display: flex;
   align-items: center;
 }
+
 .container {
-  justify-content: end;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
   padding: 20px 40px;
   background-color: #111319;
 }
+
 .d-flex {
   display: flex;
 }
@@ -148,8 +151,7 @@ a {
 }
 
 .custom-button:hover {
-  background-color: #007180;
-  color: #fff;
+  transform: scale(1.1);
 }
 
 .bottom {
@@ -232,10 +234,14 @@ hr {
   margin: 0px;
 }
 .artist {
-  color: white;
+  color: gray;
   margin: 0px;
+  cursor: pointer;
 }
-
+.artist:hover {
+  color: white;
+  text-decoration: underline !important;
+}
 .player-controls {
   display: flex;
   flex-direction: column;
@@ -259,17 +265,24 @@ hr {
   font-size: 40px !important;
   margin-top: -3px;
 }
+
+.play-icon:hover {
+  transform: scale(1.1);
+}
 .bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
 }
+
 .progress-bar {
   background-color: #454545;
-  height: 10px;
+  height: 5px;
   width: 100%;
   border-radius: 5px;
+  position: relative;
+  cursor: pointer;
 }
 
 .progress {
@@ -277,11 +290,36 @@ hr {
   height: 100%;
   width: 30%;
   border-radius: 5px;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.progress:hover {
+  background-color: #1db954;
+}
+
+.progress::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
+}
+.progress:hover::after {
+  display: block;
 }
 .icon-player {
   padding-left: 20px;
   color: gray;
   padding-top: 23px;
+  cursor: pointer;
+}
+.icon-player :hover {
+  color: white !important;
 }
 .pl-30 {
   padding-left: 30px;
@@ -484,6 +522,9 @@ hr {
     color: white;
     margin: 0px;
     display: flex;
+  }
+  .underline-text :hover {
+    text-decoration: underline !important;
   }
   .song-img {
     height: 50px;
