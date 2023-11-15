@@ -12,8 +12,12 @@ body {
 header {
   margin: 0px;
   display: flex;
+  margin-right: -40px;
 }
-
+.fixed {
+  width: auto;
+  position: fixed;
+}
 .col-12 {
   width: 100%;
 }
@@ -45,8 +49,8 @@ header {
   width: calc(100% / 12 * 3);
 }
 .col-2 {
-  width: calc(100% / 12 * 2);
-  position: relative;
+  width: 250px;
+  overflow-y: auto;
 }
 .col-1 {
   width: calc(100% / 12 * 1);
@@ -58,11 +62,9 @@ header {
   color: #b4b2b2;
   display: flex;
   flex-direction: column;
-  padding-left: 60px;
-  padding-top: 20px;
-  margin-left: -30px;
-  margin-top: -110px;
+  padding-left: 30px;
   padding-bottom: 30px;
+  position: fixed;
 }
 .color-menu {
   color: #b4b2b2;
@@ -147,7 +149,7 @@ a {
   font-size: 15px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-right: 10px;
+  margin-right: 40px;
 }
 
 .custom-button:hover {
@@ -155,13 +157,12 @@ a {
 }
 
 .bottom {
-  position: absolute;
   bottom: 0;
   left: 0;
   width: auto;
-  padding: 10px 20px;
   text-align: center;
   margin-bottom: 100px;
+  padding-top: 30px;
 }
 hr {
   width: auto;
@@ -328,10 +329,10 @@ hr {
   padding-left: 30px;
 }
 .pl-200 {
-  padding-right: 200px;
+  padding-right: 100px;
 }
 .pr-200 {
-  padding-left: 200px;
+  padding-left: 100px;
 }
 .pt-10 {
   padding-top: 10px;
@@ -373,14 +374,10 @@ hr {
   justify-content: space-around;
 }
 
-.nav-bar li {
-  margin: 0 15px;
-}
-
 .nav-bar a {
   text-decoration: none;
   color: #b7b7b7;
-  font-size: 15px;
+  font-size: 12px;
   transition: color 0.3s ease;
 }
 
@@ -411,7 +408,6 @@ hr {
 .recently-played {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .created-from {
@@ -470,18 +466,34 @@ hr {
 }
 
 @media screen and (max-width: 780px) {
+  .col-2 {
+    width: 100px;
+    overflow-y: auto;
+  }
+
+  .menu {
+    color: #b4b2b2;
+    display: flex;
+    flex-direction: column;
+    padding-left: 36px;
+    padding-bottom: 30px;
+    position: fixed;
+  }
   .logo {
     display: none;
   }
   .logo-icon {
+    width: 30px;
+    color: white;
     display: flex;
-    padding-right: 30px;
-    padding-top: 30px;
+    margin-top: 30px;
   }
   .bottom {
     text-align: center;
-    padding-left: 30px;
     width: auto;
+    position: fixed;
+    padding-left: 30px;
+    padding-bottom: 20px;
   }
 
   hr {
@@ -559,18 +571,24 @@ hr {
 }
 
 @media screen and (max-width: 568px) {
+  .col-2 {
+    width: 100px;
+    overflow-y: auto;
+  }
   .logo {
     display: none;
   }
   .logo-icon {
+    width: 30px;
+    color: white;
     display: flex;
-    padding-right: 30px;
-    padding-top: 30px;
   }
   .bottom {
     text-align: center;
-    padding-left: 30px;
     width: auto;
+    position: fixed;
+    padding-left: 30px;
+    padding-bottom: 20px;
   }
 
   hr {
@@ -641,5 +659,18 @@ hr {
   .nav-bar li {
     margin: 10px 0;
     padding: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background-color: #2c2c2c;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Add this line to stack items below each other */
   }
 }
