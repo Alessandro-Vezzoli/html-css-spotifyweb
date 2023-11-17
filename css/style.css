@@ -12,7 +12,6 @@ body {
 header {
   margin: 0px;
   display: flex;
-  margin-right: -40px;
 }
 .fixed {
   width: auto;
